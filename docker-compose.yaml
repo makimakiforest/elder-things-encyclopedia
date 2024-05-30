@@ -25,5 +25,15 @@ services:
       DB_NAME: postgres
     ports:
       - 10080:10080
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: web
+    ports:
+      - 10070:10070
+    environment:
+      PORT: 10070
 volumes:
   postgres:
