@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   db:
-    build: .
+    build: ./db
     container_name: db
     environment:
       POSTGRES_USER: root
@@ -11,5 +11,19 @@ services:
     ports:
       - 5432:5432
     restart: always
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: api
+    environment:
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: postgres
+    ports:
+      - 10080:10080
 volumes:
   postgres:
