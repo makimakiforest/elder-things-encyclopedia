@@ -1,0 +1,14 @@
+web:
+  - changed-files:
+    - any-glob-to-any-file: "web/src/**/*"
+api:
+  - changed-files:
+    - any-glob-to-any-file: "api/**/*"
+github-actions:
+  - changed-files:
+    - any-glob-to-any-file: ".github/**/*"
+docs:
+  - changed-files:
+    - any-glob-to-any-file:
+      - "README.md"
+      - "docs/**/*"
