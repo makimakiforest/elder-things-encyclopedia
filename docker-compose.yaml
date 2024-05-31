@@ -36,6 +36,14 @@ services:
     environment:
       PORT: 10070
 
+  e2e:
+    build:
+      context: ./e2e
+      dockerfile: Dockerfile
+    container_name: e2e
+    ports:
+      - 10060:10060
+
   openapi:
     image: redocly/redoc
     container_name: openapi
