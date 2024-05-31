@@ -35,5 +35,15 @@ services:
       - 10070:10070
     environment:
       PORT: 10070
+
+  openapi:
+    image: redocly/redoc
+    container_name: openapi
+    volumes:
+      - ./api:/usr/share/nginx/html/api
+    ports:
+      - 10090:10090
+    environment:
+      PORT: 10090
 volumes:
   postgres:
