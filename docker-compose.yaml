@@ -43,7 +43,5 @@ services:
       - ./api:/usr/share/nginx/html/api
     ports:
       - 10090:10090
-    environment:
-      PORT: 10090
 volumes:
   postgres:
