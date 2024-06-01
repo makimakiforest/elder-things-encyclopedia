@@ -35,6 +35,10 @@ services:
       - 10070:10070
     environment:
       PORT: 10070
+    volumes:
+      - type: bind
+        source: ./web
+        target: /web
 
   e2e:
     build:
