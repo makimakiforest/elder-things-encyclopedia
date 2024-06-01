@@ -48,8 +48,10 @@ services:
     image: redocly/redoc
     container_name: openapi
     volumes:
-      - ./api:/usr/share/nginx/html/api
+      - ./openapi/spec/rest.yaml:/usr/share/nginx/html/openapi/spec/rest.yaml
+    environment:
+      - SPEC_URL=/openapi/spec/rest.yaml
     ports:
-      - 10090:10090
+      - 10090:80
 volumes:
   postgres:
