@@ -17,6 +17,9 @@ services:
       context: ./api
       dockerfile: Dockerfile
     container_name: api
+    volumes:
+      - ./api:/api
+    tty: true
     environment:
       DB_USER: root
       DB_PASSWORD: root

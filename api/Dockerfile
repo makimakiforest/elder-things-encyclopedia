@@ -1,6 +1,5 @@
 FROM golang:1.22
 
-RUN mkdir /api
 WORKDIR /api
 
 COPY go.mod .
@@ -8,6 +7,8 @@ COPY go.sum .
 
 RUN go mod download
 
+RUN go install github.com/cosmtrek/air@latest
+
 COPY . .
 
-CMD ["go", "run", "main.go"]
+CMD ["air", "-c", ".air.toml"]
