@@ -48,6 +48,8 @@ services:
       context: ./e2e
       dockerfile: Dockerfile
     container_name: e2e
+      - ./e2e:/app
+    working_dir: /app
     ports:
       - 10060:10060
 
