@@ -1,22 +1,29 @@
-FROM maven:3.8.6-openjdk-11-slim
+FROM maven:3-openjdk-11-slim
 
-RUN apt-get update && apt-get install -y \
-    curl \
-    unzip
+# 必要なパッケージをインストール
+RUN apt-get update && apt-get install -y curl zip
 
-RUN apt-get update && apt-get install -y \
-    curl \
-    && curl -sSL https://downloads.gauge.org/stable | sh \
-    && gauge install java
+# Gaugeをインストール
+RUN curl -SsL https://downloads.gauge.org/stable | sh
 
-WORKDIR /usr/src/app
+# GaugeとJavaをインストール
+RUN gauge install java && \
+    gauge install html-report && \
+    gauge install screenshot
 
-COPY pom.xml .
+# SDKMANをインストール
+RUN curl -s "https://get.sdkman.io" | bash
 
-RUN mvn dependency:resolve
+# SDKMANを初期化
+RUN /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh"
 
-COPY src ./src
+# 作業ディレクトリを設定
+WORKDIR /app
 
-RUN mvn package
+# プロジェクトのファイルをコピー
+COPY . .
 
-CMD tail -f /dev/null
+RUN mvn compile
+
+# テストを実行するためのコマンドを設定
+CMD ["mvn", "clean", "test", "-Dtags=!WIP"]
