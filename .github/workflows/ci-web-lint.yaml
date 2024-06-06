@@ -41,3 +41,8 @@ jobs:
         run: |
           cd web
           npm run lint
+
+      - name: format
+        run: |
+          cd web
+          npm run format-check

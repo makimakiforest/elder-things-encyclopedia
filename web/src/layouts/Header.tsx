@@ -1,15 +1,18 @@
-"use client";
+'use client';
 
-import { MouseEventHandler } from "react";
+import { MouseEventHandler } from 'react';
 
 const Header: React.FC = () => {
   const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
-    console.log("unko");
+    console.log('unko');
   };
 
   return (
     <header className="container sm flex justify-between items-center py-6 px-4 m-auto">
-      <a className="text-2xl" href="/">
+      <a
+        className="text-2xl"
+        href="/"
+      >
         elder-things-encyclopedia
       </a>
       <ul className="flex">
