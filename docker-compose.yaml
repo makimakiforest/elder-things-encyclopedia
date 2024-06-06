@@ -19,6 +19,7 @@ services:
     container_name: api
     volumes:
       - ./api:/api
+      - ./openapi:/api/openapi
     tty: true
     environment:
       DB_USER: root
