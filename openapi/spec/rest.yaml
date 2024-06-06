@@ -23,3 +23,13 @@ paths:
               schema:
                 type: string
                 example: pong
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: An unexpected error occurred
