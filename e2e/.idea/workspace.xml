@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a11b69e6-5ef7-4f07-9757-2d77929d842f" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/specs/web/page.spec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/makifore/ExecutionHooks.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/makifore/web/Page.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/specs/init.spec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/makifore/StepImplementation.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/makifore/StepImplementation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/layouts/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/layouts/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/layouts/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -42,37 +42,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gauge の実行.Print hello (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gauge の実行.Print hello.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;モジュール&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gauge の実行.Print hello (1).executor": "Run",
+    "Gauge の実行.Print hello.executor": "Run",
+    "Gauge の実行.header.spec.executor": "Run",
+    "Gauge の実行.page.spec.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/update__initsql",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "feature/update-e2e-test",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "モジュール",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
->>>>>>> 4534959 (fix: e2e idea)
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/specs" />
     </key>
   </component>
-  <component name="RunManager" selected="Gauge の実行.Print hello (1)">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gauge の実行.page.spec">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="e2e" />
       <method v="2">
@@ -116,8 +112,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="header.spec" type="executeSpecs" factoryName="GaugeConfigurationFactory" temporary="true">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="$PROJECT_DIR$/specs/web/header.spec" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="gauge_kotlin_maven" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="page.spec" type="executeSpecs" factoryName="GaugeConfigurationFactory" temporary="true">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="$PROJECT_DIR$/specs/web/page.spec" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="gauge_kotlin_maven" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gauge の実行.page.spec" />
+        <item itemvalue="Gauge の実行.header.spec" />
         <item itemvalue="Gauge の実行.Print hello (1)" />
         <item itemvalue="Gauge の実行.Print hello" />
       </list>
