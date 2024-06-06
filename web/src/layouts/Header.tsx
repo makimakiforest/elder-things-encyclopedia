@@ -8,9 +8,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="container sm flex justify-between items-center py-6 px-4 m-auto">
+    <header className="header container sm flex justify-between items-center py-6 px-4 m-auto">
       <a
-        className="text-2xl"
+        className="header-title text-2xl"
         href="/"
       >
         elder-things-encyclopedia
