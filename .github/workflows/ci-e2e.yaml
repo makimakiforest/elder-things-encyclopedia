@@ -23,7 +23,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    working-directory: e2e
+    defaults:
+      run:
+        working-directory: e2e
 
     steps:
       - name: Checkout
