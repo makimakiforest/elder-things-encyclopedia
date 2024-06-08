@@ -7,7 +7,7 @@ import java.net.http.HttpClient
 class Api {
     @Step("URL<url>にGETリクエストを送る")
     fun execApi(url: String) {
-        
+
 
     }
 
