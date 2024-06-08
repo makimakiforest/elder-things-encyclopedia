@@ -1,6 +1,7 @@
 'use client';
 
 import { MouseEventHandler } from 'react';
+import { Box, Button, Link, List, ListItem } from '@mui/material';
 
 const Header: React.FC = () => {
   const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
@@ -8,20 +9,41 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="header container sm flex justify-between items-center py-6 px-4 m-auto">
-      <a
-        className="header-title text-2xl"
+    <Box
+      className="header"
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '0 1rem',
+        backgroundColor: 'white',
+        boxShadow: '0 0 5px rgba(0, 0, 0, 0.1)',
+      }}
+    >
+      <Link
+        className="header-title"
         href="/"
       >
         elder-things-encyclopedia
-      </a>
-      <ul className="flex">
-        <li className="mr-2">
-          <button onClick={handleClick}>JSONアップロード</button>
-        </li>
-        <li>お問い合わせ</li>
-      </ul>
-    </header>
+      </Link>
+      <List
+        sx={{
+          display: 'flex',
+        }}
+      >
+        <ListItem>
+          <Button
+            sx={{
+              minWidth: '200px',
+            }}
+            onClick={handleClick}
+          >
+            JSONアップロード
+          </Button>
+        </ListItem>
+        <ListItem>お問い合わせ</ListItem>
+      </List>
+    </Box>
   );
 };
 
