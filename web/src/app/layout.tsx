@@ -17,8 +17,11 @@ export default function RootLayout({
     <html lang="jp">
       <body style={{ margin: 0 }}>
         <Header />
-        <Box bgcolor="grey.100" height={"100vh"}>
-        {children}
+        <Box
+          bgcolor="grey.100"
+          height={'100vh'}
+        >
+          {children}
         </Box>
       </body>
     </html>
