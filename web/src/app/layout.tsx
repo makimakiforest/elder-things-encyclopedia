@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '@/layouts/Header';
+import { Box } from '@mui/material';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
@@ -14,9 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
-      <body className="bg-white">
+      <body style={{ margin: 0 }}>
         <Header />
+        <Box bgcolor="grey.100" height={"100vh"}>
         {children}
+        </Box>
       </body>
     </html>
   );
