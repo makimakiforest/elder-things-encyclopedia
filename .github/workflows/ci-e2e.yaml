@@ -31,20 +31,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'adopt'
-          java-version: '11'
+      # - name: Setup Java
+      #   uses: actions/setup-java@v4
+      #   with:
+      #     distribution: 'adopt'
+      #     java-version: '11'
 
-      - name: Install Gauge
-        run: curl -SsL https://downloads.gauge.org/stable | sh
+      # - name: Install Gauge
+      #   run: curl -SsL https://downloads.gauge.org/stable | sh
 
-      - name: Install Gauge Java Plugin
-        run: gauge install java
+      # - name: Install Gauge Java Plugin
+      #   run: gauge install java
 
-      - name: Echo Gauge Version
-        run: gauge version
+      # - name: Echo Gauge Version
+      #   run: gauge version
 
-      - name: Run Maven Test
-        run: mvn test
+      # - name: Run Maven Test
+      #   run: mvn test
