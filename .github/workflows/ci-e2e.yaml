@@ -31,6 +31,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Docker Compose Up
+        run: docker-compose up -d
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
