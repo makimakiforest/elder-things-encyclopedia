@@ -1,20 +1,24 @@
 package com.makifore
 
 import com.codeborne.selenide.Configuration
-import com.thoughtworks.gauge.BeforeSpec
 import com.codeborne.selenide.WebDriverRunner
 import com.thoughtworks.gauge.AfterScenario
 import com.thoughtworks.gauge.BeforeSuite
-import com.thoughtworks.gauge.ExecutionContext
 
 class ExecutionHooks {
+    @BeforeSuite
+    fun beforeSuite() {
+        prepareSelenide()
+    }
+
     @AfterScenario
     fun afterScenario() {
         WebDriverRunner.closeWebDriver()
     }
 
-    @BeforeSpec
-    fun prepareApp(executionContext: ExecutionContext) {
-
+    private fun prepareSelenide() {
+        Configuration.baseUrl = "localhost:10070"
+        Configuration.headless = true
+        Configuration.remote = null
     }
 }

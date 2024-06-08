@@ -1,0 +1,4 @@
+selenide:
+  baseUrl: http://localhost:10070
+  headless: true
+  remote: null

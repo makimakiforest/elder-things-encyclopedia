@@ -6,13 +6,13 @@ import java.net.http.HttpClient
 
 class Api {
     @Step("URL<url>にGETリクエストを送る")
-    fun execApi(url: String) {
+    fun execApi() {
 
 
     }
 
     @Step("ステータスコード<statusCode>が返ってくる")
-    fun confirmStatusCode(statusCode: Int) {
+    fun confirmStatusCode() {
 
     }
 }
