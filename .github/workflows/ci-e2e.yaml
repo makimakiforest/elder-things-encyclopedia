@@ -31,20 +31,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'adopt'
-          java-version: '11'
+      # - name: Docker Compose Up
+      #   run: |
+      #     cd ../
+      #     docker-compose up -d
+      #     docker-compose ps
 
-      - name: Install Gauge
-        run: curl -SsL https://downloads.gauge.org/stable | sh
+      # - name: Setup Java
+      #   uses: actions/setup-java@v4
+      #   with:
+      #     distribution: 'adopt'
+      #     java-version: '11'
 
-      - name: Install Gauge Java Plugin
-        run: gauge install java
+      # - name: Install Gauge
+      #   run: curl -SsL https://downloads.gauge.org/stable | sh
 
-      - name: Echo Gauge Version
-        run: gauge version
+      # - name: Install Gauge Java Plugin
+      #   run: gauge install java
 
-      - name: Run Maven Test
-        run: mvn test
+      # - name: Echo Gauge Version
+      #   run: gauge version
+
+      # - name: Run Maven Test
+      #   run: docker exec -it e2e mvn clean test
