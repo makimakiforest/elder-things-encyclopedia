@@ -23,6 +23,9 @@ const Header: React.FC = () => {
       <Link
         className="header-title"
         href="/"
+        sx={{
+          textDecoration: 'none',
+        }}
       >
         elder-things-encyclopedia
       </Link>
