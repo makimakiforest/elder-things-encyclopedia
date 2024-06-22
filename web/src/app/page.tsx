@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 export default function Home() {
   return (
     <main className="character-page">
-      <Box sx={{ display: 'flex', justifyContent: 'center', padding: '8rem 0' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', padding: '8rem 0 0 0' }}>
         <Grid
           container
           spacing={5}

@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="jp">
       <body style={{ margin: 0 }}>
-        <Header />
+        <Header sx={{ position: 'fixed', width: '100%', zIndex: 1100, boxSizing: 'border-box' }} />
         <Box
           bgcolor="grey.100"
           height={'100vh'}

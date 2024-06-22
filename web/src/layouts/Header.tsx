@@ -1,13 +1,10 @@
 'use client';
 
-import { MouseEventHandler } from 'react';
-import { Box, Button, Link, List, ListItem } from '@mui/material';
+import { Box, BoxProps, Button, Link, List, ListItem } from '@mui/material';
 
-const Header: React.FC = () => {
-  const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
-    console.log('unko');
-  };
+type HeaderProps = Pick<BoxProps, 'sx'>;
 
+const Header: React.FC<HeaderProps> = ({ sx }) => {
   return (
     <Box
       className="header"
@@ -17,12 +14,21 @@ const Header: React.FC = () => {
         alignItems: 'center',
         padding: '0 1rem',
         backgroundColor: 'white',
-        boxShadow: '0 0 5px rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.2)',
+        ...sx,
       }}
     >
       <Link
         className="header-title"
         href="/"
+        sx={{
+          textDecoration: 'none',
+          color: 'black',
+          fontWeight: 'bold',
+          '&:hover': {
+            color: '#1976d2',
+          },
+        }}
       >
         elder-things-encyclopedia
       </Link>
@@ -36,7 +42,6 @@ const Header: React.FC = () => {
             sx={{
               minWidth: '200px',
             }}
-            onClick={handleClick}
           >
             JSONアップロード
           </Button>
