@@ -19,7 +19,10 @@ export default function RootLayout({
         <Header sx={{ position: 'fixed', width: '100%', zIndex: 1100, boxSizing: 'border-box' }} />
         <Box
           bgcolor="grey.100"
-          height={'100vh'}
+          height={'100%'}
+          sx={{
+            pb: 8,
+          }}
         >
           {children}
         </Box>
