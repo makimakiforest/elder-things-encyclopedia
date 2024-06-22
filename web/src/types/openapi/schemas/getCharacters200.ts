@@ -6,8 +6,8 @@
  * Orvalで自動生成したファイルです。
  * 手動で編集した内容は再生成時に削除されてしまうので直接編集しないでください
  */
+import type { GetCharacters200CharactersItem } from './getCharacters200CharactersItem';
 
-export * from './getCharacters200';
-export * from './getCharacters200CharactersItem';
-export * from './getCharactersDefault';
-export * from './getSystemPingDefault';
+export type GetCharacters200 = {
+  characters: GetCharacters200CharactersItem[];
+};
