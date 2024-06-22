@@ -13,6 +13,15 @@ type UnimplementedHandler struct{}
 
 var _ Handler = UnimplementedHandler{}
 
+// CharactersGet implements GET /characters operation.
+//
+// Get a list of characters.
+//
+// GET /characters
+func (UnimplementedHandler) CharactersGet(ctx context.Context) (r *CharactersGetOK, _ error) {
+	return r, ht.ErrNotImplemented
+}
+
 // SystemPingGet implements GET /system/ping operation.
 //
 // System ping.

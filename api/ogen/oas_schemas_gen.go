@@ -5,10 +5,62 @@ package api
 import (
 	"fmt"
 	"io"
+
+	"github.com/google/uuid"
 )
 
 func (s *ErrRespStatusCode) Error() string {
 	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
+}
+
+type CharactersGetOK struct {
+	Characters []CharactersGetOKCharactersItem `json:"characters"`
+}
+
+// GetCharacters returns the value of Characters.
+func (s *CharactersGetOK) GetCharacters() []CharactersGetOKCharactersItem {
+	return s.Characters
+}
+
+// SetCharacters sets the value of Characters.
+func (s *CharactersGetOK) SetCharacters(val []CharactersGetOKCharactersItem) {
+	s.Characters = val
+}
+
+type CharactersGetOKCharactersItem struct {
+	ID      uuid.UUID `json:"id"`
+	Name    string    `json:"name"`
+	Profile string    `json:"profile"`
+}
+
+// GetID returns the value of ID.
+func (s *CharactersGetOKCharactersItem) GetID() uuid.UUID {
+	return s.ID
+}
+
+// GetName returns the value of Name.
+func (s *CharactersGetOKCharactersItem) GetName() string {
+	return s.Name
+}
+
+// GetProfile returns the value of Profile.
+func (s *CharactersGetOKCharactersItem) GetProfile() string {
+	return s.Profile
+}
+
+// SetID sets the value of ID.
+func (s *CharactersGetOKCharactersItem) SetID(val uuid.UUID) {
+	s.ID = val
+}
+
+// SetName sets the value of Name.
+func (s *CharactersGetOKCharactersItem) SetName(val string) {
+	s.Name = val
+}
+
+// SetProfile sets the value of Profile.
+func (s *CharactersGetOKCharactersItem) SetProfile(val string) {
+	s.Profile = val
 }
 
 type ErrResp struct {
