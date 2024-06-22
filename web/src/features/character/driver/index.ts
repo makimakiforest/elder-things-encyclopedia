@@ -1,3 +1,3 @@
 interface CharacterDriver {
-  getCharacters: () => Promise<void>
+  getCharacters: () => Promise<void>;
 }
