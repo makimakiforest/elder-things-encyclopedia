@@ -33,3 +33,45 @@ paths:
                   message:
                     type: string
                     example: An unexpected error occurred
+  /characters:
+    get:
+      summary: Get a list of characters
+      responses:
+        '200':
+          description: A list of characters
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - characters
+                properties:
+                  characters:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - id
+                        - name
+                        - profile
+                      properties:
+                        id:
+                          type: string
+                          format: uuid
+                          example: "123e4567-e89b-12d3-a456-426614174000"
+                        name:
+                          type: string
+                          example: "John Doe"
+                        profile:
+                          type: string
+                          example: "A brief profile of John Doe."
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: An unexpected error occurred

@@ -8,6 +8,12 @@ import (
 
 // Handler handles operations described by OpenAPI v3 specification.
 type Handler interface {
+	// CharactersGet implements GET /characters operation.
+	//
+	// Get a list of characters.
+	//
+	// GET /characters
+	CharactersGet(ctx context.Context) (*CharactersGetOK, error)
 	// SystemPingGet implements GET /system/ping operation.
 	//
 	// System ping.
