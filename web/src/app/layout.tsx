@@ -15,11 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
-      <body style={{ margin: 0 }}>
+      <body style={{ margin: 0, backgroundColor: '#f5f5f5' }}>
         <Header sx={{ position: 'fixed', width: '100%', zIndex: 1100, boxSizing: 'border-box' }} />
         <Box
           bgcolor="grey.100"
-          height={'100vh'}
+          height={'100%'}
+          sx={{
+            pb: 8,
+          }}
         >
           {children}
         </Box>
