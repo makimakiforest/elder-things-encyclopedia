@@ -1,8 +1,13 @@
+'use client';
+
 import CharacterCard from '@/features/character/components/CharacterCard';
+import { useCharacters } from '@/features/character/hooks/useCharacters';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
-export default function Home() {
+const TopPage: React.FC = () => {
+  const { characters } = useCharacters();
+
   return (
     <main className="character-page">
       <Box sx={{ display: 'flex', justifyContent: 'center', padding: '8rem 0 0 0' }}>
@@ -12,7 +17,7 @@ export default function Home() {
           justifyContent="center"
           maxWidth={700}
         >
-          {[...Array(9)].map((_, i) => (
+          {characters.map((_, i) => (
             <Grid
               item
               xs={12}
@@ -27,4 +32,6 @@ export default function Home() {
       </Box>
     </main>
   );
-}
+};
+
+export default TopPage;
