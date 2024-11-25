@@ -15,7 +15,7 @@
         <gauge.java.version>0.11.1</gauge.java.version>
         <gauge.maven.version>1.6.1</gauge.maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenide.version>7.5.1</selenide.version>
+        <selenide.version>7.6.0</selenide.version>
     </properties>
 
     <dependencyManagement>
