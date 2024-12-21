@@ -18,8 +18,8 @@
     "next": "14.2.21",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.0",
-    "@mui/icons-material": "6.1.8",
-    "@mui/material": "6.1.8"
+    "@mui/icons-material": "6.2.1",
+    "@mui/material": "6.2.1"
   },
   "devDependencies": {
     "typescript": "^5",
