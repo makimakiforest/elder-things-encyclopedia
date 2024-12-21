@@ -15,7 +15,7 @@
     "axios": "^1.5.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.18",
+    "next": "14.2.21",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.0",
     "@mui/icons-material": "6.1.8",
@@ -27,7 +27,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.18",
+    "eslint-config-next": "14.2.21",
     "prettier": "3.4.2"
   }
 }
