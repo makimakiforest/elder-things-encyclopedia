@@ -17,7 +17,7 @@
     "react-dom": "^18",
     "next": "14.2.30",
     "@emotion/react": "11.14.0",
-    "@emotion/styled": "11.14.0",
+    "@emotion/styled": "11.14.1",
     "@mui/icons-material": "6.4.11",
     "@mui/material": "6.4.11"
   },
